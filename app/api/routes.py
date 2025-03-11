@@ -9,7 +9,7 @@ from schemas import QueryRequest , QueryResponse
 
 # Import your services
 from services.chunking import ChunkingService
-from services.embedding import EmbeddingService
+from services.embeddings import EmbeddingService
 from services.retrieval import RetrievalService
 from services.llm import LLMService
 from services.document_store import DocumentStore
