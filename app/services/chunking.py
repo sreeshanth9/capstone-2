@@ -4,10 +4,9 @@ from nltk.tokenize import sent_tokenize
 from PyPDF2 import PdfReader
 from docx import Document
 
-# Ensure required NLTK data is available
 nltk.download('punkt')
 
-class Chunking:
+class ChunkingService:
     def __init__(self, chunk_size=200, overlap=50):
         self.chunk_size = chunk_size
         self.overlap = overlap
@@ -72,8 +71,8 @@ class Chunking:
         sentences = self.split_into_sentences(cleaned_text)
         return self.recursive_chunking(sentences)
 
-if __name__ == "__main__":
-    chunker = Chunking(chunk_size=300, overlap=50)
-    chunks = chunker.process("sample.pdf")
-    for i, chunk in enumerate(chunks):
-        print(f"Chunk {i+1}:\n{chunk}\n")
+# if __name__ == "__main__":
+#     chunker = ChunkingService(chunk_size=300, overlap=50)
+#     chunks = chunker.process("sample.pdf")
+#     for i, chunk in enumerate(chunks):
+#         print(f"Chunk {i+1}:\n{chunk}\n")
