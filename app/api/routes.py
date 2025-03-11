@@ -3,7 +3,7 @@ from datetime import datetime
 from fastapi import APIRouter, UploadFile, File, HTTPException
 from pymongo import MongoClient
 from services.embeddings import EmbeddingService
-from services.chunking import Chunking
+from services.chunking import ChunkingService
 from database.mongodb import get_database
 
 client = MongoClient("mongodb://localhost:27017/")
@@ -14,7 +14,7 @@ UPLOAD_DIR = "uploads"
 os.makedirs(UPLOAD_DIR, exist_ok=True)
 
 router = APIRouter()
-chunking_service = Chunking()
+chunking_service = ChunkingService()
 embedding_service = EmbeddingService()
 db = get_database()
 
