@@ -41,9 +41,9 @@ def read_root():
 
 if __name__ == "__main__":
     # Check for OpenAI API key
-    if not os.environ.get("OPENAI_API_KEY"):
-        print("Warning: OPENAI_API_KEY environment variable not set")
-        print("Set it with: export OPENAI_API_KEY='your-key-here'")
+    # if not os.environ.get("OPENAI_API_KEY"):
+    #     print("Warning: OPENAI_API_KEY environment variable not set")
+    #     print("Set it with: export OPENAI_API_KEY='your-key-here'")
     
     # Run the server
     uvicorn.run(
