@@ -124,7 +124,7 @@ with main_col1:
     col1, col2 = st.columns(2)
     
     with col1:
-        top_k = st.slider("Number of chunks to retrieve", min_value=1, max_value=10, value=5)
+        top_k = st.slider("Number of chunks to retrieve", min_value=1, max_value=100, value=5)
     with col2:
         include_sources = st.checkbox("Include sources", value=True)
     
