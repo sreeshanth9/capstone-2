@@ -19,7 +19,7 @@ class RAGPipeline:
         self.llm_service = llm_service
         self.document_store = document_store
         
-    def process_document(self, file_path: str, title: Optional[str] = None, metadata: Optional[Dict[str, Any]] = None) -> str:
+    def process_document(self, file_path: str, title: Optional[str] = None, metadata: Optional[Dict[str, Any]] = None, doc_id=None) -> str:
         """
         Process a document through the RAG pipeline.
         

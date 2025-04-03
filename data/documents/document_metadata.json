@@ -1,0 +1,34 @@
+{
+  "bc92c320-8709-41ff-be8d-f5031755550e": {
+    "id": "bc92c320-8709-41ff-be8d-f5031755550e",
+    "title": "Report-Jury (27-11-2024).pdf",
+    "filename": "90348716-3bac-4ea5-8963-66cdedfffdf5_Report-Jury (27-11-2024).pdf",
+    "file_path": "uploads\\pdf\\90348716-3bac-4ea5-8963-66cdedfffdf5_Report-Jury (27-11-2024).pdf",
+    "upload_date": "2025-04-03T13:44:08.557568",
+    "metadata": {
+      "mongo_id": "67ee435068a417cb8b97f23e"
+    },
+    "num_chunks": 0,
+    "status": "failed: \n**********************************************************************\n  Resource \u001b[93mpunkt_tab\u001b[0m not found.\n  Please use the NLTK Downloader to obtain the resource:\n\n  \u001b[31m>>> import nltk\n  >>> nltk.download('punkt_tab')\n  \u001b[0m\n  For more information see: https://www.nltk.org/data.html\n\n  Attempted to load \u001b[93mtokenizers/punkt_tab/english/\u001b[0m\n\n  Searched in:\n    - 'C:\\\\Users\\\\srees/nltk_data'\n    - 'C:\\\\Users\\\\srees\\\\OneDrive\\\\Desktop\\\\Semester-08\\\\capstone2-impl\\\\venv\\\\nltk_data'\n    - 'C:\\\\Users\\\\srees\\\\OneDrive\\\\Desktop\\\\Semester-08\\\\capstone2-impl\\\\venv\\\\share\\\\nltk_data'\n    - 'C:\\\\Users\\\\srees\\\\OneDrive\\\\Desktop\\\\Semester-08\\\\capstone2-impl\\\\venv\\\\lib\\\\nltk_data'\n    - 'C:\\\\Users\\\\srees\\\\AppData\\\\Roaming\\\\nltk_data'\n    - 'C:\\\\nltk_data'\n    - 'D:\\\\nltk_data'\n    - 'E:\\\\nltk_data'\n**********************************************************************\n"
+  },
+  "51b89bd2-5f0e-4842-b9f5-3f12b5694e15": {
+    "id": "51b89bd2-5f0e-4842-b9f5-3f12b5694e15",
+    "title": "90348716-3bac-4ea5-8963-66cdedfffdf5_Report-Jury (27-11-2024).pdf",
+    "filename": "90348716-3bac-4ea5-8963-66cdedfffdf5_Report-Jury (27-11-2024).pdf",
+    "file_path": "uploads\\pdf\\90348716-3bac-4ea5-8963-66cdedfffdf5_Report-Jury (27-11-2024).pdf",
+    "upload_date": "2025-04-03T13:44:08.560265",
+    "metadata": {},
+    "num_chunks": 0,
+    "status": "failed: \n**********************************************************************\n  Resource \u001b[93mpunkt_tab\u001b[0m not found.\n  Please use the NLTK Downloader to obtain the resource:\n\n  \u001b[31m>>> import nltk\n  >>> nltk.download('punkt_tab')\n  \u001b[0m\n  For more information see: https://www.nltk.org/data.html\n\n  Attempted to load \u001b[93mtokenizers/punkt_tab/english/\u001b[0m\n\n  Searched in:\n    - 'C:\\\\Users\\\\srees/nltk_data'\n    - 'C:\\\\Users\\\\srees\\\\OneDrive\\\\Desktop\\\\Semester-08\\\\capstone2-impl\\\\venv\\\\nltk_data'\n    - 'C:\\\\Users\\\\srees\\\\OneDrive\\\\Desktop\\\\Semester-08\\\\capstone2-impl\\\\venv\\\\share\\\\nltk_data'\n    - 'C:\\\\Users\\\\srees\\\\OneDrive\\\\Desktop\\\\Semester-08\\\\capstone2-impl\\\\venv\\\\lib\\\\nltk_data'\n    - 'C:\\\\Users\\\\srees\\\\AppData\\\\Roaming\\\\nltk_data'\n    - 'C:\\\\nltk_data'\n    - 'D:\\\\nltk_data'\n    - 'E:\\\\nltk_data'\n**********************************************************************\n"
+  },
+  "e40e4934-64c2-4d24-951b-3ac47b9a47ea": {
+    "id": "e40e4934-64c2-4d24-951b-3ac47b9a47ea",
+    "title": "90348716-3bac-4ea5-8963-66cdedfffdf5_Report-Jury (27-11-2024).pdf",
+    "filename": "90348716-3bac-4ea5-8963-66cdedfffdf5_Report-Jury (27-11-2024).pdf",
+    "file_path": "uploads\\pdf\\90348716-3bac-4ea5-8963-66cdedfffdf5_Report-Jury (27-11-2024).pdf",
+    "upload_date": "2025-04-03T13:44:10.590303",
+    "metadata": {},
+    "num_chunks": 0,
+    "status": "failed: \n**********************************************************************\n  Resource \u001b[93mpunkt_tab\u001b[0m not found.\n  Please use the NLTK Downloader to obtain the resource:\n\n  \u001b[31m>>> import nltk\n  >>> nltk.download('punkt_tab')\n  \u001b[0m\n  For more information see: https://www.nltk.org/data.html\n\n  Attempted to load \u001b[93mtokenizers/punkt_tab/english/\u001b[0m\n\n  Searched in:\n    - 'C:\\\\Users\\\\srees/nltk_data'\n    - 'C:\\\\Users\\\\srees\\\\OneDrive\\\\Desktop\\\\Semester-08\\\\capstone2-impl\\\\venv\\\\nltk_data'\n    - 'C:\\\\Users\\\\srees\\\\OneDrive\\\\Desktop\\\\Semester-08\\\\capstone2-impl\\\\venv\\\\share\\\\nltk_data'\n    - 'C:\\\\Users\\\\srees\\\\OneDrive\\\\Desktop\\\\Semester-08\\\\capstone2-impl\\\\venv\\\\lib\\\\nltk_data'\n    - 'C:\\\\Users\\\\srees\\\\AppData\\\\Roaming\\\\nltk_data'\n    - 'C:\\\\nltk_data'\n    - 'D:\\\\nltk_data'\n    - 'E:\\\\nltk_data'\n**********************************************************************\n"
+  }
+}

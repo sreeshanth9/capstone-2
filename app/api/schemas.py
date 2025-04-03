@@ -1,5 +1,5 @@
 from pydantic import BaseModel
-from typing import List
+from typing import List, Dict, Optional, Any
 
 # Pydantic models for request/response
 class QueryRequest(BaseModel):

@@ -1,0 +1,46 @@
+{
+  "0eb1d3fe-200b-4480-ad5b-1a9f31e64eca": {
+    "id": "0eb1d3fe-200b-4480-ad5b-1a9f31e64eca",
+    "title": "Report-Jury (27-11-2024).pdf",
+    "filename": "97bda145-2270-4b45-88de-0d11398e3494_Report-Jury (27-11-2024).pdf",
+    "file_path": "uploads\\pdf\\97bda145-2270-4b45-88de-0d11398e3494_Report-Jury (27-11-2024).pdf",
+    "upload_date": "2025-03-12T10:38:01.305570",
+    "metadata": {
+      "mongo_id": "67d116b1e86e3470880717a1"
+    },
+    "num_chunks": 0,
+    "status": "failed: RAGPipeline.process_document() got an unexpected keyword argument 'doc_id'"
+  },
+  "3862d5e1-cae3-458f-b648-6b5e59b52054": {
+    "id": "3862d5e1-cae3-458f-b648-6b5e59b52054",
+    "title": "Report-Jury (27-11-2024).pdf",
+    "filename": "413c8bc1-89da-43f6-a9f1-f644e9fe50e9_Report-Jury (27-11-2024).pdf",
+    "file_path": "uploads\\pdf\\413c8bc1-89da-43f6-a9f1-f644e9fe50e9_Report-Jury (27-11-2024).pdf",
+    "upload_date": "2025-03-12T11:56:29.564314",
+    "metadata": {
+      "mongo_id": "67d1291556d2bfe325e34597"
+    },
+    "num_chunks": 0,
+    "status": "failed: \n**********************************************************************\n  Resource \u001b[93mpunkt_tab\u001b[0m not found.\n  Please use the NLTK Downloader to obtain the resource:\n\n  \u001b[31m>>> import nltk\n  >>> nltk.download('punkt_tab')\n  \u001b[0m\n  For more information see: https://www.nltk.org/data.html\n\n  Attempted to load \u001b[93mtokenizers/punkt_tab/english/\u001b[0m\n\n  Searched in:\n    - 'C:\\\\Users\\\\srees/nltk_data'\n    - 'C:\\\\Users\\\\srees\\\\OneDrive\\\\Desktop\\\\Semester-08\\\\capstone2-impl\\\\venv\\\\nltk_data'\n    - 'C:\\\\Users\\\\srees\\\\OneDrive\\\\Desktop\\\\Semester-08\\\\capstone2-impl\\\\venv\\\\share\\\\nltk_data'\n    - 'C:\\\\Users\\\\srees\\\\OneDrive\\\\Desktop\\\\Semester-08\\\\capstone2-impl\\\\venv\\\\lib\\\\nltk_data'\n    - 'C:\\\\Users\\\\srees\\\\AppData\\\\Roaming\\\\nltk_data'\n    - 'C:\\\\nltk_data'\n    - 'D:\\\\nltk_data'\n    - 'E:\\\\nltk_data'\n**********************************************************************\n"
+  },
+  "c90ae5ac-79d8-496b-ae5e-756505795e58": {
+    "id": "c90ae5ac-79d8-496b-ae5e-756505795e58",
+    "title": "413c8bc1-89da-43f6-a9f1-f644e9fe50e9_Report-Jury (27-11-2024).pdf",
+    "filename": "413c8bc1-89da-43f6-a9f1-f644e9fe50e9_Report-Jury (27-11-2024).pdf",
+    "file_path": "uploads\\pdf\\413c8bc1-89da-43f6-a9f1-f644e9fe50e9_Report-Jury (27-11-2024).pdf",
+    "upload_date": "2025-03-12T11:56:29.571126",
+    "metadata": {},
+    "num_chunks": 0,
+    "status": "failed: \n**********************************************************************\n  Resource \u001b[93mpunkt_tab\u001b[0m not found.\n  Please use the NLTK Downloader to obtain the resource:\n\n  \u001b[31m>>> import nltk\n  >>> nltk.download('punkt_tab')\n  \u001b[0m\n  For more information see: https://www.nltk.org/data.html\n\n  Attempted to load \u001b[93mtokenizers/punkt_tab/english/\u001b[0m\n\n  Searched in:\n    - 'C:\\\\Users\\\\srees/nltk_data'\n    - 'C:\\\\Users\\\\srees\\\\OneDrive\\\\Desktop\\\\Semester-08\\\\capstone2-impl\\\\venv\\\\nltk_data'\n    - 'C:\\\\Users\\\\srees\\\\OneDrive\\\\Desktop\\\\Semester-08\\\\capstone2-impl\\\\venv\\\\share\\\\nltk_data'\n    - 'C:\\\\Users\\\\srees\\\\OneDrive\\\\Desktop\\\\Semester-08\\\\capstone2-impl\\\\venv\\\\lib\\\\nltk_data'\n    - 'C:\\\\Users\\\\srees\\\\AppData\\\\Roaming\\\\nltk_data'\n    - 'C:\\\\nltk_data'\n    - 'D:\\\\nltk_data'\n    - 'E:\\\\nltk_data'\n**********************************************************************\n"
+  },
+  "0673dfe8-950a-4be3-b6b4-d1d2aaafad23": {
+    "id": "0673dfe8-950a-4be3-b6b4-d1d2aaafad23",
+    "title": "413c8bc1-89da-43f6-a9f1-f644e9fe50e9_Report-Jury (27-11-2024).pdf",
+    "filename": "413c8bc1-89da-43f6-a9f1-f644e9fe50e9_Report-Jury (27-11-2024).pdf",
+    "file_path": "uploads\\pdf\\413c8bc1-89da-43f6-a9f1-f644e9fe50e9_Report-Jury (27-11-2024).pdf",
+    "upload_date": "2025-03-12T11:56:31.628836",
+    "metadata": {},
+    "num_chunks": 0,
+    "status": "failed: \n**********************************************************************\n  Resource \u001b[93mpunkt_tab\u001b[0m not found.\n  Please use the NLTK Downloader to obtain the resource:\n\n  \u001b[31m>>> import nltk\n  >>> nltk.download('punkt_tab')\n  \u001b[0m\n  For more information see: https://www.nltk.org/data.html\n\n  Attempted to load \u001b[93mtokenizers/punkt_tab/english/\u001b[0m\n\n  Searched in:\n    - 'C:\\\\Users\\\\srees/nltk_data'\n    - 'C:\\\\Users\\\\srees\\\\OneDrive\\\\Desktop\\\\Semester-08\\\\capstone2-impl\\\\venv\\\\nltk_data'\n    - 'C:\\\\Users\\\\srees\\\\OneDrive\\\\Desktop\\\\Semester-08\\\\capstone2-impl\\\\venv\\\\share\\\\nltk_data'\n    - 'C:\\\\Users\\\\srees\\\\OneDrive\\\\Desktop\\\\Semester-08\\\\capstone2-impl\\\\venv\\\\lib\\\\nltk_data'\n    - 'C:\\\\Users\\\\srees\\\\AppData\\\\Roaming\\\\nltk_data'\n    - 'C:\\\\nltk_data'\n    - 'D:\\\\nltk_data'\n    - 'E:\\\\nltk_data'\n**********************************************************************\n"
+  }
+}

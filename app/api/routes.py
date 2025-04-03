@@ -5,16 +5,16 @@ from fastapi import APIRouter, UploadFile, File, HTTPException, BackgroundTasks,
 from typing import Optional, Dict, Any, List
 from pymongo import MongoClient
 from pydantic import BaseModel
-from schemas import QueryRequest , QueryResponse
+from .schemas import QueryRequest, QueryResponse
 
 # Import your services
-from services.chunking import ChunkingService
-from services.embeddings import EmbeddingService
-from services.retrieval import RetrievalService
-from services.llm import LLMService
-from services.document_store import DocumentStore
-from services.rag_pipeline import RAGPipeline
-from database.mongodb import get_database
+from app.services.chunking import ChunkingService
+from app.services.embeddings import EmbeddingService
+from app.services.retrieval import RetrievalService
+from app.services.llm import LLMService
+from app.services.document_store import DocumentStore
+from app.services.rag_pipeline import RAGPipeline
+from app.database.mongodb import get_database
 
 # MongoDB setup
 client = MongoClient("mongodb://localhost:27017/")
@@ -31,7 +31,7 @@ chunking_service = ChunkingService()
 embedding_service = EmbeddingService()
 retrieval_service = RetrievalService(embedding_service)
 document_store = DocumentStore()
-llm_service = LLMService(api_key=os.environ.get("OPENAI_API_KEY"))
+llm_service = LLMService()
 
 # Create RAG pipeline
 rag_pipeline = RAGPipeline(
