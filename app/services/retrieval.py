@@ -1,6 +1,7 @@
 from typing import List, Dict, Any
 import json
 import os
+import faiss
 
 class RetrievalService:
     def __init__(self, embedding_service):

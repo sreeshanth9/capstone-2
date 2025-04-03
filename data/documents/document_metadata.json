@@ -30,5 +30,133 @@
     "metadata": {},
     "num_chunks": 0,
     "status": "failed: \n**********************************************************************\n  Resource \u001b[93mpunkt_tab\u001b[0m not found.\n  Please use the NLTK Downloader to obtain the resource:\n\n  \u001b[31m>>> import nltk\n  >>> nltk.download('punkt_tab')\n  \u001b[0m\n  For more information see: https://www.nltk.org/data.html\n\n  Attempted to load \u001b[93mtokenizers/punkt_tab/english/\u001b[0m\n\n  Searched in:\n    - 'C:\\\\Users\\\\srees/nltk_data'\n    - 'C:\\\\Users\\\\srees\\\\OneDrive\\\\Desktop\\\\Semester-08\\\\capstone2-impl\\\\venv\\\\nltk_data'\n    - 'C:\\\\Users\\\\srees\\\\OneDrive\\\\Desktop\\\\Semester-08\\\\capstone2-impl\\\\venv\\\\share\\\\nltk_data'\n    - 'C:\\\\Users\\\\srees\\\\OneDrive\\\\Desktop\\\\Semester-08\\\\capstone2-impl\\\\venv\\\\lib\\\\nltk_data'\n    - 'C:\\\\Users\\\\srees\\\\AppData\\\\Roaming\\\\nltk_data'\n    - 'C:\\\\nltk_data'\n    - 'D:\\\\nltk_data'\n    - 'E:\\\\nltk_data'\n**********************************************************************\n"
+  },
+  "5bce3df5-65a7-4156-b75a-3f1c193fb32a": {
+    "id": "5bce3df5-65a7-4156-b75a-3f1c193fb32a",
+    "title": "Report-Jury (27-11-2024).pdf",
+    "filename": "7d169f56-fcf2-4f7f-83fa-b69c5b004719_Report-Jury (27-11-2024).pdf",
+    "file_path": "uploads\\pdf\\7d169f56-fcf2-4f7f-83fa-b69c5b004719_Report-Jury (27-11-2024).pdf",
+    "upload_date": "2025-04-03T23:35:21.458994",
+    "metadata": {
+      "mongo_id": "67eecde1d060a969429acde3"
+    },
+    "num_chunks": 0,
+    "status": "failed: \n**********************************************************************\n  Resource \u001b[93mpunkt_tab\u001b[0m not found.\n  Please use the NLTK Downloader to obtain the resource:\n\n  \u001b[31m>>> import nltk\n  >>> nltk.download('punkt_tab')\n  \u001b[0m\n  For more information see: https://www.nltk.org/data.html\n\n  Attempted to load \u001b[93mtokenizers/punkt_tab/english/\u001b[0m\n\n  Searched in:\n    - 'C:\\\\Users\\\\srees/nltk_data'\n    - 'C:\\\\Users\\\\srees\\\\OneDrive\\\\Desktop\\\\Semester-08\\\\capstone2-impl\\\\venv\\\\nltk_data'\n    - 'C:\\\\Users\\\\srees\\\\OneDrive\\\\Desktop\\\\Semester-08\\\\capstone2-impl\\\\venv\\\\share\\\\nltk_data'\n    - 'C:\\\\Users\\\\srees\\\\OneDrive\\\\Desktop\\\\Semester-08\\\\capstone2-impl\\\\venv\\\\lib\\\\nltk_data'\n    - 'C:\\\\Users\\\\srees\\\\AppData\\\\Roaming\\\\nltk_data'\n    - 'C:\\\\nltk_data'\n    - 'D:\\\\nltk_data'\n    - 'E:\\\\nltk_data'\n**********************************************************************\n"
+  },
+  "6be48eed-e504-4d22-9bfe-b5d0be9a2c17": {
+    "id": "6be48eed-e504-4d22-9bfe-b5d0be9a2c17",
+    "title": "7d169f56-fcf2-4f7f-83fa-b69c5b004719_Report-Jury (27-11-2024).pdf",
+    "filename": "7d169f56-fcf2-4f7f-83fa-b69c5b004719_Report-Jury (27-11-2024).pdf",
+    "file_path": "uploads\\pdf\\7d169f56-fcf2-4f7f-83fa-b69c5b004719_Report-Jury (27-11-2024).pdf",
+    "upload_date": "2025-04-03T23:35:21.462035",
+    "metadata": {},
+    "num_chunks": 0,
+    "status": "failed: \n**********************************************************************\n  Resource \u001b[93mpunkt_tab\u001b[0m not found.\n  Please use the NLTK Downloader to obtain the resource:\n\n  \u001b[31m>>> import nltk\n  >>> nltk.download('punkt_tab')\n  \u001b[0m\n  For more information see: https://www.nltk.org/data.html\n\n  Attempted to load \u001b[93mtokenizers/punkt_tab/english/\u001b[0m\n\n  Searched in:\n    - 'C:\\\\Users\\\\srees/nltk_data'\n    - 'C:\\\\Users\\\\srees\\\\OneDrive\\\\Desktop\\\\Semester-08\\\\capstone2-impl\\\\venv\\\\nltk_data'\n    - 'C:\\\\Users\\\\srees\\\\OneDrive\\\\Desktop\\\\Semester-08\\\\capstone2-impl\\\\venv\\\\share\\\\nltk_data'\n    - 'C:\\\\Users\\\\srees\\\\OneDrive\\\\Desktop\\\\Semester-08\\\\capstone2-impl\\\\venv\\\\lib\\\\nltk_data'\n    - 'C:\\\\Users\\\\srees\\\\AppData\\\\Roaming\\\\nltk_data'\n    - 'C:\\\\nltk_data'\n    - 'D:\\\\nltk_data'\n    - 'E:\\\\nltk_data'\n**********************************************************************\n"
+  },
+  "80ea50ad-7a7d-48e5-be34-adfa57ac862f": {
+    "id": "80ea50ad-7a7d-48e5-be34-adfa57ac862f",
+    "title": "7d169f56-fcf2-4f7f-83fa-b69c5b004719_Report-Jury (27-11-2024).pdf",
+    "filename": "7d169f56-fcf2-4f7f-83fa-b69c5b004719_Report-Jury (27-11-2024).pdf",
+    "file_path": "uploads\\pdf\\7d169f56-fcf2-4f7f-83fa-b69c5b004719_Report-Jury (27-11-2024).pdf",
+    "upload_date": "2025-04-03T23:35:23.590928",
+    "metadata": {},
+    "num_chunks": 0,
+    "status": "failed: \n**********************************************************************\n  Resource \u001b[93mpunkt_tab\u001b[0m not found.\n  Please use the NLTK Downloader to obtain the resource:\n\n  \u001b[31m>>> import nltk\n  >>> nltk.download('punkt_tab')\n  \u001b[0m\n  For more information see: https://www.nltk.org/data.html\n\n  Attempted to load \u001b[93mtokenizers/punkt_tab/english/\u001b[0m\n\n  Searched in:\n    - 'C:\\\\Users\\\\srees/nltk_data'\n    - 'C:\\\\Users\\\\srees\\\\OneDrive\\\\Desktop\\\\Semester-08\\\\capstone2-impl\\\\venv\\\\nltk_data'\n    - 'C:\\\\Users\\\\srees\\\\OneDrive\\\\Desktop\\\\Semester-08\\\\capstone2-impl\\\\venv\\\\share\\\\nltk_data'\n    - 'C:\\\\Users\\\\srees\\\\OneDrive\\\\Desktop\\\\Semester-08\\\\capstone2-impl\\\\venv\\\\lib\\\\nltk_data'\n    - 'C:\\\\Users\\\\srees\\\\AppData\\\\Roaming\\\\nltk_data'\n    - 'C:\\\\nltk_data'\n    - 'D:\\\\nltk_data'\n    - 'E:\\\\nltk_data'\n**********************************************************************\n"
+  },
+  "c6fc4a84-c754-4239-b9f0-9397ddcddc07": {
+    "id": "c6fc4a84-c754-4239-b9f0-9397ddcddc07",
+    "title": "finalNotes.pdf",
+    "filename": "35f2bd03-5ad0-4b43-8969-9fdeb9f8313c_finalNotes.pdf",
+    "file_path": "uploads\\pdf\\35f2bd03-5ad0-4b43-8969-9fdeb9f8313c_finalNotes.pdf",
+    "upload_date": "2025-04-03T23:37:14.303341",
+    "metadata": {
+      "mongo_id": "67eece52d060a969429acde4"
+    },
+    "num_chunks": 0,
+    "status": "failed: \n**********************************************************************\n  Resource \u001b[93mpunkt_tab\u001b[0m not found.\n  Please use the NLTK Downloader to obtain the resource:\n\n  \u001b[31m>>> import nltk\n  >>> nltk.download('punkt_tab')\n  \u001b[0m\n  For more information see: https://www.nltk.org/data.html\n\n  Attempted to load \u001b[93mtokenizers/punkt_tab/english/\u001b[0m\n\n  Searched in:\n    - 'C:\\\\Users\\\\srees/nltk_data'\n    - 'C:\\\\Users\\\\srees\\\\OneDrive\\\\Desktop\\\\Semester-08\\\\capstone2-impl\\\\venv\\\\nltk_data'\n    - 'C:\\\\Users\\\\srees\\\\OneDrive\\\\Desktop\\\\Semester-08\\\\capstone2-impl\\\\venv\\\\share\\\\nltk_data'\n    - 'C:\\\\Users\\\\srees\\\\OneDrive\\\\Desktop\\\\Semester-08\\\\capstone2-impl\\\\venv\\\\lib\\\\nltk_data'\n    - 'C:\\\\Users\\\\srees\\\\AppData\\\\Roaming\\\\nltk_data'\n    - 'C:\\\\nltk_data'\n    - 'D:\\\\nltk_data'\n    - 'E:\\\\nltk_data'\n**********************************************************************\n"
+  },
+  "8822a9cf-5a2d-4581-bdf8-6391d24d6ed1": {
+    "id": "8822a9cf-5a2d-4581-bdf8-6391d24d6ed1",
+    "title": "35f2bd03-5ad0-4b43-8969-9fdeb9f8313c_finalNotes.pdf",
+    "filename": "35f2bd03-5ad0-4b43-8969-9fdeb9f8313c_finalNotes.pdf",
+    "file_path": "uploads\\pdf\\35f2bd03-5ad0-4b43-8969-9fdeb9f8313c_finalNotes.pdf",
+    "upload_date": "2025-04-03T23:37:14.306381",
+    "metadata": {},
+    "num_chunks": 0,
+    "status": "failed: \n**********************************************************************\n  Resource \u001b[93mpunkt_tab\u001b[0m not found.\n  Please use the NLTK Downloader to obtain the resource:\n\n  \u001b[31m>>> import nltk\n  >>> nltk.download('punkt_tab')\n  \u001b[0m\n  For more information see: https://www.nltk.org/data.html\n\n  Attempted to load \u001b[93mtokenizers/punkt_tab/english/\u001b[0m\n\n  Searched in:\n    - 'C:\\\\Users\\\\srees/nltk_data'\n    - 'C:\\\\Users\\\\srees\\\\OneDrive\\\\Desktop\\\\Semester-08\\\\capstone2-impl\\\\venv\\\\nltk_data'\n    - 'C:\\\\Users\\\\srees\\\\OneDrive\\\\Desktop\\\\Semester-08\\\\capstone2-impl\\\\venv\\\\share\\\\nltk_data'\n    - 'C:\\\\Users\\\\srees\\\\OneDrive\\\\Desktop\\\\Semester-08\\\\capstone2-impl\\\\venv\\\\lib\\\\nltk_data'\n    - 'C:\\\\Users\\\\srees\\\\AppData\\\\Roaming\\\\nltk_data'\n    - 'C:\\\\nltk_data'\n    - 'D:\\\\nltk_data'\n    - 'E:\\\\nltk_data'\n**********************************************************************\n"
+  },
+  "dfb3f075-9200-4bdf-bc81-e37cffac3517": {
+    "id": "dfb3f075-9200-4bdf-bc81-e37cffac3517",
+    "title": "35f2bd03-5ad0-4b43-8969-9fdeb9f8313c_finalNotes.pdf",
+    "filename": "35f2bd03-5ad0-4b43-8969-9fdeb9f8313c_finalNotes.pdf",
+    "file_path": "uploads\\pdf\\35f2bd03-5ad0-4b43-8969-9fdeb9f8313c_finalNotes.pdf",
+    "upload_date": "2025-04-03T23:37:16.484385",
+    "metadata": {},
+    "num_chunks": 0,
+    "status": "failed: \n**********************************************************************\n  Resource \u001b[93mpunkt_tab\u001b[0m not found.\n  Please use the NLTK Downloader to obtain the resource:\n\n  \u001b[31m>>> import nltk\n  >>> nltk.download('punkt_tab')\n  \u001b[0m\n  For more information see: https://www.nltk.org/data.html\n\n  Attempted to load \u001b[93mtokenizers/punkt_tab/english/\u001b[0m\n\n  Searched in:\n    - 'C:\\\\Users\\\\srees/nltk_data'\n    - 'C:\\\\Users\\\\srees\\\\OneDrive\\\\Desktop\\\\Semester-08\\\\capstone2-impl\\\\venv\\\\nltk_data'\n    - 'C:\\\\Users\\\\srees\\\\OneDrive\\\\Desktop\\\\Semester-08\\\\capstone2-impl\\\\venv\\\\share\\\\nltk_data'\n    - 'C:\\\\Users\\\\srees\\\\OneDrive\\\\Desktop\\\\Semester-08\\\\capstone2-impl\\\\venv\\\\lib\\\\nltk_data'\n    - 'C:\\\\Users\\\\srees\\\\AppData\\\\Roaming\\\\nltk_data'\n    - 'C:\\\\nltk_data'\n    - 'D:\\\\nltk_data'\n    - 'E:\\\\nltk_data'\n**********************************************************************\n"
+  },
+  "bf783341-9f99-4b7b-a6dd-90ad0efd747b": {
+    "id": "bf783341-9f99-4b7b-a6dd-90ad0efd747b",
+    "title": "finalNotes.pdf",
+    "filename": "62ce88e6-671f-43b9-98bb-6e739a0d6b2d_finalNotes.pdf",
+    "file_path": "uploads\\pdf\\62ce88e6-671f-43b9-98bb-6e739a0d6b2d_finalNotes.pdf",
+    "upload_date": "2025-04-03T23:42:04.568405",
+    "metadata": {
+      "mongo_id": "67eecf749982644e8e1ffcaf"
+    },
+    "num_chunks": 0,
+    "status": "pending"
+  },
+  "6a752d24-f453-4dc5-bfe5-5474906e94e4": {
+    "id": "6a752d24-f453-4dc5-bfe5-5474906e94e4",
+    "title": "62ce88e6-671f-43b9-98bb-6e739a0d6b2d_finalNotes.pdf",
+    "filename": "62ce88e6-671f-43b9-98bb-6e739a0d6b2d_finalNotes.pdf",
+    "file_path": "uploads\\pdf\\62ce88e6-671f-43b9-98bb-6e739a0d6b2d_finalNotes.pdf",
+    "upload_date": "2025-04-03T23:42:04.580769",
+    "metadata": {},
+    "num_chunks": 21,
+    "status": "completed"
+  },
+  "15270063-4f45-47fd-8d1b-cd4ef894c617": {
+    "id": "15270063-4f45-47fd-8d1b-cd4ef894c617",
+    "title": "62ce88e6-671f-43b9-98bb-6e739a0d6b2d_finalNotes.pdf",
+    "filename": "62ce88e6-671f-43b9-98bb-6e739a0d6b2d_finalNotes.pdf",
+    "file_path": "uploads\\pdf\\62ce88e6-671f-43b9-98bb-6e739a0d6b2d_finalNotes.pdf",
+    "upload_date": "2025-04-03T23:42:06.611603",
+    "metadata": {},
+    "num_chunks": 21,
+    "status": "completed"
+  },
+  "7407e1f8-d223-473f-81f3-ee19768ff813": {
+    "id": "7407e1f8-d223-473f-81f3-ee19768ff813",
+    "title": "finalNotes.pdf",
+    "filename": "da669a29-7e51-4285-a3c2-fd3d00d0d3b7_finalNotes.pdf",
+    "file_path": "uploads\\pdf\\da669a29-7e51-4285-a3c2-fd3d00d0d3b7_finalNotes.pdf",
+    "upload_date": "2025-04-03T23:53:36.949586",
+    "metadata": {
+      "mongo_id": "67eed2283b9db9734cc517a4"
+    },
+    "num_chunks": 0,
+    "status": "pending"
+  },
+  "973640b2-2ee4-4698-b6dc-cff044bfcd91": {
+    "id": "973640b2-2ee4-4698-b6dc-cff044bfcd91",
+    "title": "da669a29-7e51-4285-a3c2-fd3d00d0d3b7_finalNotes.pdf",
+    "filename": "da669a29-7e51-4285-a3c2-fd3d00d0d3b7_finalNotes.pdf",
+    "file_path": "uploads\\pdf\\da669a29-7e51-4285-a3c2-fd3d00d0d3b7_finalNotes.pdf",
+    "upload_date": "2025-04-03T23:53:36.963773",
+    "metadata": {},
+    "num_chunks": 21,
+    "status": "completed"
+  },
+  "2f2014e2-edf8-4593-8e4a-35961224ba78": {
+    "id": "2f2014e2-edf8-4593-8e4a-35961224ba78",
+    "title": "da669a29-7e51-4285-a3c2-fd3d00d0d3b7_finalNotes.pdf",
+    "filename": "da669a29-7e51-4285-a3c2-fd3d00d0d3b7_finalNotes.pdf",
+    "file_path": "uploads\\pdf\\da669a29-7e51-4285-a3c2-fd3d00d0d3b7_finalNotes.pdf",
+    "upload_date": "2025-04-03T23:53:39.023068",
+    "metadata": {},
+    "num_chunks": 21,
+    "status": "completed"
   }
 }

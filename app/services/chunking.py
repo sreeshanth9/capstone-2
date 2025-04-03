@@ -4,7 +4,7 @@ from nltk.tokenize import sent_tokenize
 from PyPDF2 import PdfReader
 from docx import Document
 
-nltk.download('punkt')
+nltk.download('punkt_tab')
 
 class ChunkingService:
     def __init__(self, chunk_size=200, overlap=50):
