@@ -230,6 +230,57 @@ class LLMService:
             "Content-Type": "application/json"
         }
 
+    # def generate_response(self, query: str, context_chunks: List[Dict[str, Any]]) -> str:
+    #     """
+    #     Generate response using Hugging Face API with retrieved context.
+        
+    #     Args:
+    #         query: User query
+    #         context_chunks: Retrieved context chunks
+            
+    #     Returns:
+    #         Generated response string
+    #     """
+    #     # Prepare context from retrieved chunks
+    #     context = "\n\n".join([chunk["content"] for chunk in context_chunks])
+
+    #     # Create input prompt
+    #     prompt = f"""
+    #     Answer the following question based on the provided context information. 
+    #     If you cannot answer the question based on the context, just say that you don't know.
+
+    #     Context:
+    #     {context}
+
+    #     Question: {query}
+
+    #     Answer:
+    #     """
+
+    #     payload = {
+    #         "inputs": prompt,
+    #         "parameters": {
+    #             "max_new_tokens": 500,
+    #             "temperature": 0.7,
+    #             "top_p": 0.9,
+    #             "do_sample": True
+    #         }
+    #     }
+
+    #     try:
+    #         response = requests.post(HF_ENDPOINT_URL, headers=self.headers, data=json.dumps(payload))
+    #         response.raise_for_status()
+    #         result = response.json()
+
+    #         # Extract generated text
+    #         generated_text = result[0]["generated_text"] if isinstance(result, list) else result["generated_text"]
+    #         return generated_text.strip()
+        
+    #     except requests.exceptions.RequestException as e:
+    #         print(f"Error calling Hugging Face API: {e}")
+    #         return "Error: Unable to generate response."
+        
+    
     def generate_response(self, query: str, context_chunks: List[Dict[str, Any]]) -> str:
         """
         Generate response using Hugging Face API with retrieved context.
@@ -241,22 +292,38 @@ class LLMService:
         Returns:
             Generated response string
         """
-        # Prepare context from retrieved chunks
-        context = "\n\n".join([chunk["content"] for chunk in context_chunks])
-
-        # Create input prompt
+        # Prepare context from retrieved chunks with source identifiers
+        formatted_contexts = []
+        for i, chunk in enumerate(context_chunks):
+            chunk_text = chunk["content"]
+            doc_id = chunk.get("doc_id", f"Document {i+1}")
+            formatted_contexts.append(f"[Source: {doc_id}]\n{chunk_text}")
+        
+        context = "\n\n---\n\n".join(formatted_contexts)
+        
+        # Create improved input prompt
         prompt = f"""
-        Answer the following question based on the provided context information. 
-        If you cannot answer the question based on the context, just say that you don't know.
-
-        Context:
+        You are a helpful assistant that provides accurate information based on the given context.
+        
+        CONTEXT INFORMATION:
+        --------------------
         {context}
-
-        Question: {query}
-
-        Answer:
+        --------------------
+        
+        USER QUERY: {query}
+        
+        Instructions:
+        1. Answer the query based ONLY on the provided context information.
+        2. If the context doesn't contain enough information to fully answer the query, explain what's missing.
+        3. If the context contains contradictory information, point this out and explain the different perspectives.
+        4. Use a direct, concise writing style while being comprehensive.
+        5. If appropriate, structure your answer with bullet points or numbered lists for clarity.
+        6. Do not make up information that isn't supported by the context.
+        7. Do not refer to the sources explicitly in your answer (e.g., don't say "According to Source 1...").
+        
+        ANSWER:
         """
-
+        
         payload = {
             "inputs": prompt,
             "parameters": {
@@ -266,19 +333,22 @@ class LLMService:
                 "do_sample": True
             }
         }
-
+        
         try:
             response = requests.post(HF_ENDPOINT_URL, headers=self.headers, data=json.dumps(payload))
             response.raise_for_status()
             result = response.json()
-
             # Extract generated text
             generated_text = result[0]["generated_text"] if isinstance(result, list) else result["generated_text"]
-            return generated_text.strip()
+            # Clean up the output - get only the part after "ANSWER:"
+            if "ANSWER:" in generated_text:
+                generated_text = generated_text.split("ANSWER:")[1].strip()
+            return generated_text
         
         except requests.exceptions.RequestException as e:
             print(f"Error calling Hugging Face API: {e}")
             return "Error: Unable to generate response."
+
 
     def generate_response_with_sources(self, query: str, context_chunks: List[Dict[str, Any]]) -> Dict[str, Any]:
         """

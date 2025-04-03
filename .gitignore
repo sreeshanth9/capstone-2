@@ -1,6 +1,10 @@
 venv/
+<<<<<<< HEAD
 app/__pycache__/
 app/services/__pycache__/
 app/models/__pycache__/
 app/utils/__pycache__/
 app/tests/__pycache__/
+=======
+app/services/pycache
+>>>>>>> 98701f688727734ff29e220b29d11ea4c479a162
