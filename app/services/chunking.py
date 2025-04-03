@@ -66,7 +66,7 @@ class ChunkingService:
         return overlapped_chunks
 
     def process(self, pdf_path):
-        raw_text = self.extract_text_from_pdf(pdf_path)
+        raw_text = self.extract_text(pdf_path)
         cleaned_text = self.clean_text(raw_text)
         sentences = self.split_into_sentences(cleaned_text)
         return self.recursive_chunking(sentences)
