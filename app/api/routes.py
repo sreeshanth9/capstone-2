@@ -7,13 +7,13 @@ from pydantic import BaseModel
 from .schemas import QueryRequest, QueryResponse
 
 # Import your services
-from app.services.chunking import ChunkingService
-from app.services.embeddings import EmbeddingService
-from app.services.retrieval import RetrievalService
-from app.services.llm import LLMService
-from app.database.mongodb import get_database
-from app.services.mongodb_document_store import MongoDBDocumentStore
-from app.services.rag_pipeline import RAGPipeline
+from services.chunking import ChunkingService
+from services.embeddings import EmbeddingService
+from services.retrieval import RetrievalService
+from services.llm import LLMService
+from database.mongodb import get_database
+from services.mongodb_document_store import MongoDBDocumentStore
+from services.rag_pipeline import RAGPipeline
 
 router = APIRouter()
 
@@ -145,6 +145,7 @@ def delete_document(doc_id: str):
 @router.post("/query", response_model=QueryResponse)
 def query(request: QueryRequest):
     """Process a query through the RAG pipeline"""
+    # import pdb; pdb.set_trace()
     try:
         result = rag_pipeline.query(
             request.query, 

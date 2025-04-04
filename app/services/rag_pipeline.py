@@ -1,107 +1,108 @@
-from typing import Dict, List, Any, Optional
-import os
+# from typing import Dict, List, Any, Optional
+# import os
 
-class RAGPipeline:
-    def __init__(self, chunking_service, embedding_service, retrieval_service, llm_service, document_store):
-        self.chunking_service = chunking_service
-        self.embedding_service = embedding_service
-        self.retrieval_service = retrieval_service
-        self.llm_service = llm_service
-        self.document_store = document_store
+# class RAGPipeline:
+#     def __init__(self, chunking_service, embedding_service, retrieval_service, llm_service, document_store):
+#         self.chunking_service = chunking_service
+#         self.embedding_service = embedding_service
+#         self.retrieval_service = retrieval_service
+#         self.llm_service = llm_service
+#         self.document_store = document_store
         
-    def process_document(self, file_path: str, doc_id: str):
-        """
-        Process a document:
-        1. Extract text and chunk it
-        2. Generate embeddings and add to vector index
-        3. Store chunks in MongoDB
-        """
-        # Extract text and chunk it
-        chunks = self.chunking_service.process_file(file_path)
+#     def process_document(self, file_path: str, doc_id: str):
+#         """
+#         Process a document:
+#         1. Extract text and chunk it
+#         2. Generate embeddings and add to vector index
+#         3. Store chunks in MongoDB
+#         """
+#         # Extract text and chunk it
+#         chunks = self.chunking_service.process(file_path)
         
-        # For each chunk, create a document with appropriate metadata
-        chunk_documents = []
+#         # For each chunk, create a document with appropriate metadata
+#         chunk_documents = []
         
-        for i, chunk in enumerate(chunks):
-            chunk_text = chunk["text"]
-            chunk_document = {
-                "chunk_id": f"{doc_id}_{i}",
-                "text": chunk_text,
-                "document_id": doc_id,
-                "index": i,
-                "metadata": {
-                    "source": file_path,
-                    "page": chunk.get("metadata", {}).get("page", None),
-                    "position": i
-                }
-            }
+#         for i, chunk in enumerate(chunks):
+#             # import pdb; pdb.set_trace()
+#             chunk_text = chunk["text"]
+#             chunk_document = {
+#                 "chunk_id": f"{doc_id}_{i}",
+#                 "text": chunk_text,
+#                 "document_id": doc_id,
+#                 "index": i,
+#                 "metadata": {
+#                     "source": file_path,
+#                     "page": chunk.get("metadata", {}).get("page", None),
+#                     "position": i
+#                 }
+#             }
             
-            # Generate embedding for the chunk
-            embedding = self.embedding_service.get_embedding(chunk_text)
-            chunk_document["embedding"] = embedding
+#             # Generate embedding for the chunk
+#             embedding = self.embedding_service.get_embedding(chunk_text)
+#             chunk_document["embedding"] = embedding
             
-            chunk_documents.append(chunk_document)
+#             chunk_documents.append(chunk_document)
         
-        # Add chunks to MongoDB
-        self.document_store.add_chunks(doc_id, chunk_documents)
+#         # Add chunks to MongoDB
+#         self.document_store.add_chunks(doc_id, chunk_documents)
         
-        # Add vectors to retrieval index
-        self.retrieval_service.add_texts(
-            texts=[chunk["text"] for chunk in chunk_documents],
-            embeddings=[chunk["embedding"] for chunk in chunk_documents],
-            metadatas=[{
-                "document_id": chunk["document_id"],
-                "chunk_id": chunk["chunk_id"],
-                "source": chunk["metadata"]["source"]
-            } for chunk in chunk_documents]
-        )
+#         # Add vectors to retrieval index
+#         self.retrieval_service.add_texts(
+#             texts=[chunk["text"] for chunk in chunk_documents],
+#             embeddings=[chunk["embedding"] for chunk in chunk_documents],
+#             metadatas=[{
+#                 "document_id": chunk["document_id"],
+#                 "chunk_id": chunk["chunk_id"],
+#                 "source": chunk["metadata"]["source"]
+#             } for chunk in chunk_documents]
+#         )
         
-        # Save the updated index
-        self.retrieval_service.save_index("./data/index/vector_index")
+#         # Save the updated index
+#         self.retrieval_service.save_index("./data/index/vector_index")
         
-        return len(chunk_documents)
+#         return len(chunk_documents)
         
-    def query(self, query_text: str, top_k: int = 3, include_sources: bool = True):
-        """
-        Process a query through the RAG pipeline:
-        1. Retrieve relevant chunks from the vector index
-        2. Generate response using LLM with retrieved context
-        """
-        # Get query embedding
-        query_embedding = self.embedding_service.get_embedding(query_text)
+#     def query(self, query_text: str, top_k: int = 3, include_sources: bool = True):
+#         """
+#         Process a query through the RAG pipeline:
+#         1. Retrieve relevant chunks from the vector index
+#         2. Generate response using LLM with retrieved context
+#         """
+#         # Get query embedding
+#         query_embedding = self.embedding_service.get_embedding(query_text)
         
-        # Retrieve relevant chunks
-        search_results = self.retrieval_service.search_by_vector(
-            query_embedding, top_k=top_k
-        )
+#         # Retrieve relevant chunks
+#         search_results = self.retrieval_service.search_by_vector(
+#             query_embedding, top_k=top_k
+#         )
         
-        # Format context from search results
-        context_texts = [result["text"] for result in search_results]
-        context = "\n\n".join(context_texts)
+#         # Format context from search results
+#         context_texts = [result["text"] for result in search_results]
+#         context = "\n\n".join(context_texts)
         
-        # Generate response
-        response = self.llm_service.generate_response(query_text, context)
+#         # Generate response
+#         response = self.llm_service.generate_response(query_text, context)
         
-        # Prepare sources if requested
-        sources = None
-        if include_sources:
-            sources = []
-            for result in search_results:
-                doc_id = result["metadata"]["document_id"]
-                document = self.document_store.get_document(doc_id)
+#         # Prepare sources if requested
+#         sources = None
+#         if include_sources:
+#             sources = []
+#             for result in search_results:
+#                 doc_id = result["metadata"]["document_id"]
+#                 document = self.document_store.get_document(doc_id)
                 
-                sources.append({
-                    "document_id": doc_id,
-                    "title": document.get("title", "Unknown"),
-                    "text": result["text"][:200] + "...",  # Preview text
-                    "relevance": float(result["score"]) if "score" in result else None
-                })
+#                 sources.append({
+#                     "document_id": doc_id,
+#                     "title": document.get("title", "Unknown"),
+#                     "text": result["text"][:200] + "...",  # Preview text
+#                     "relevance": float(result["score"]) if "score" in result else None
+#                 })
         
-        return {
-            "query": query_text,
-            "response": response,
-            "sources": sources
-        }
+#         return {
+#             "query": query_text,
+#             "response": response,
+#             "sources": sources
+#         }
 
 # class RAGPipeline:
 #     def __init__(self, chunking_service, embedding_service, retrieval_service, llm_service, document_store):
@@ -182,3 +183,112 @@ class RAGPipeline:
 #         else:
 #             response = self.llm_service.generate_response(query, context_chunks)
 #             return {"response": response}
+
+
+from typing import Dict, List, Any, Optional
+import os
+
+class RAGPipeline:
+    def __init__(self, chunking_service, embedding_service, retrieval_service, llm_service, document_store):
+        self.chunking_service = chunking_service
+        self.embedding_service = embedding_service
+        self.retrieval_service = retrieval_service
+        self.llm_service = llm_service
+        self.document_store = document_store
+        
+    def process_document(self, file_path: str, doc_id: str):
+        """
+        Process a document:
+        1. Extract text and chunk it
+        2. Generate embeddings and add to vector index
+        3. Store chunks in MongoDB
+        """
+        # Extract text and chunk it
+        chunks = self.chunking_service.process(file_path)
+        chunk_texts = [chunk["text"] for chunk in chunks]
+
+        # Generate embeddings and store in FAISS
+        embeddings = self.embedding_service.store_embeddings(chunk_texts, doc_id)
+
+        print(f"Number of embeddings stored: {len(embeddings)}")
+        print(f"Index total vectors: {self.embedding_service.index.ntotal}")
+
+        # Create chunk documents with embeddings
+        chunk_documents = []
+        for i, (chunk, embedding) in enumerate(zip(chunks, embeddings)):
+            chunk_document = {
+                "chunk_id": f"{doc_id}_{i}",
+                "text": chunk["text"],
+                "document_id": doc_id,
+                "index": i,
+                "metadata": {
+                    "source": file_path,
+                    "page": chunk.get("metadata", {}).get("page", None),
+                    "position": i
+                },
+                "embedding": embedding.tolist()  # Ensure it's stored as a list
+            }
+            chunk_documents.append(chunk_document)
+
+        # Store chunks in MongoDB
+        self.document_store.add_chunks(doc_id, chunk_documents)
+
+        # Add vectors to retrieval index
+        self.retrieval_service.add_texts(
+            texts=[chunk["text"] for chunk in chunk_documents],
+            embeddings=[chunk["embedding"] for chunk in chunk_documents],
+            metadatas=[{
+                "document_id": chunk["document_id"],
+                "chunk_id": chunk["chunk_id"],
+                "source": chunk["metadata"]["source"]
+            } for chunk in chunk_documents]
+        )
+
+        # Save the updated index
+        self.retrieval_service.save_index("./data/index/vector_index")
+
+        return len(chunk_documents)
+        
+    def query(self, query_text: str, top_k: int = 3, include_sources: bool = True):
+        """
+        Process a query through the RAG pipeline:
+        1. Retrieve relevant chunks from the vector index
+        2. Generate response using LLM with retrieved context
+        """
+        # Get query embedding
+        query_embedding = self.embedding_service.generate_embeddings([query_text])[0]
+
+        # Retrieve relevant chunks
+        search_results = self.retrieval_service.search_by_vector(
+            query_embedding, top_k=top_k
+        )
+
+        # Format context from search results
+        context_texts = [result["text"] for result in search_results]
+        context = "\n\n".join(context_texts)
+
+        print("Search results:", search_results)
+
+        # Generate response
+        response = self.llm_service.generate_response(query_text, search_results)
+
+        # Prepare sources if requested
+        sources = None
+        if include_sources:
+            sources = []
+            for result in search_results:
+                doc_id = result["metadata"]["document_id"]
+                document = self.document_store.get_document(doc_id)
+
+                sources.append({
+                    "document_id": doc_id,
+                    "title": document.get("title", "Unknown"),
+                    "text": result["text"][:200] + "...",  # Preview text
+                    "relevance": float(result["score"]) if "score" in result else None
+                })
+
+        return {
+            "query": query_text,
+            "response": response,
+            "sources": sources
+        }

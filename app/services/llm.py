@@ -295,7 +295,7 @@ class LLMService:
         # Prepare context from retrieved chunks with source identifiers
         formatted_contexts = []
         for i, chunk in enumerate(context_chunks):
-            chunk_text = chunk["content"]
+            chunk_text = chunk["text"]
             doc_id = chunk.get("doc_id", f"Document {i+1}")
             formatted_contexts.append(f"[Source: {doc_id}]\n{chunk_text}")
         
@@ -333,8 +333,11 @@ class LLMService:
                 "do_sample": True
             }
         }
+
+        print("Type of inputs:", type(payload["inputs"]))
         
         try:
+            print("Payload being sent:", json.dumps(payload, indent=2))
             response = requests.post(HF_ENDPOINT_URL, headers=self.headers, data=json.dumps(payload))
             response.raise_for_status()
             result = response.json()
@@ -347,6 +350,7 @@ class LLMService:
         
         except requests.exceptions.RequestException as e:
             print(f"Error calling Hugging Face API: {e}")
+            print("Response content:", response.content)
             return "Error: Unable to generate response."
 
 

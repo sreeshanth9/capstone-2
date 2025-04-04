@@ -177,7 +177,9 @@ class ChunkingService:
         raw_text = self.extract_text(pdf_path)
         cleaned_text = self.clean_text(raw_text)
         sentences = self.split_into_sentences(cleaned_text)
-        return self.create_chunks(sentences)
+        chunk_texts = self.create_chunks(sentences)
+
+        return [{"chunk_number": i + 1, "text": chunk} for i, chunk in enumerate(chunk_texts)]
 
 
 # if __name__ == "__main__":
